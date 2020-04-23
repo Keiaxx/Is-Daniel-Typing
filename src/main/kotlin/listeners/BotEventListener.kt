@@ -42,7 +42,8 @@ class BotEventListener(val botMain: BotMain) : ListenerAdapter() {
     override fun onMessageReceived(event: MessageReceivedEvent) {
         val userId = event.message.author.id
 
-        if (true){
+        // Only allow Keiaxx#7052 to summon the bot
+        if (userId == "107322097553960960"){
             val messageContent = event.message.contentRaw.toLowerCase()
 
             if (messageContent == "i wish i knew when daniel was typing"){
